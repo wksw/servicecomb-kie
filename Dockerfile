@@ -17,6 +17,7 @@ RUN mkdir -p /opt/servicecomb-kie/conf
 
 COPY --from=build /go/src/github.com/apache/servicecomb-kie/kie /opt/servicecomb-kie/kie
 COPY ./scripts/start.sh /opt/servicecomb-kie/
+COPY ./examples/dev/conf/microservice.yaml /opt/servicecomb-kie/conf/
 
 
 ENTRYPOINT ["/opt/servicecomb-kie/start.sh"]
